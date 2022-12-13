@@ -1,5 +1,5 @@
 [package]
-name = "Mahjong-Rust"
+name = "mahjong-rust"
 version = "0.1.0"
 edition = "2021"
 

@@ -1,3 +1,5 @@
+mod internal;
+
 fn main() {
-    println!("Hello, world!");
+    println!("{}", internal::tile::tile_display(internal::tile::Tile::White));
 }
