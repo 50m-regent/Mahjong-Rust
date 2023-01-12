@@ -1,5 +1,4 @@
-use crate::player::Player;
-use crate::internal::tile::Tile;
+use crate::internal::{tile::Tile, player::Player};
 
 pub trait Agent {
     fn discard(&self, player: &mut Player) -> Tile;

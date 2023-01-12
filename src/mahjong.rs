@@ -1,6 +1,5 @@
-use crate::internal::{wind::Wind, state::State};
+use crate::internal::{wind::Wind, state::State, player::Player};
 use crate::agents::agent::Agent;
-use crate::player::Player;
 
 pub struct Mahjong<T, U, V, W> where
     T: Agent,
@@ -35,6 +34,4 @@ impl<T: Agent, U: Agent, V: Agent, W: Agent> Mahjong<T, U, V, W> {
             states: Vec::new(),
         }
     }
-
-    
 }

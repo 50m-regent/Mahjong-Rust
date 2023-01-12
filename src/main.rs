@@ -1,7 +1,6 @@
 mod agents;
 mod internal;
 mod mahjong;
-mod player;
 
 use internal::{tile, tiles::Tiles, wind::Wind};
 use tile::Tile;
@@ -9,26 +8,24 @@ use agents::greedy::GreedyAgent;
 use mahjong::Mahjong;
 
 fn main() {
-    let tiles = Tiles::from(Vec::from([
-        Tile::C1,
-        Tile::C1,
-        Tile::C1,
-        Tile::C2,
-        Tile::C2,
-        Tile::C3,
-        Tile::C4,
-        Tile::C5,
-        Tile::C6,
-        Tile::C7,
-        Tile::C8,
-        Tile::C9,
-        Tile::C9,
-        Tile::C9,
-    ]));
-    
-    println!("{}", tile::to_str(Tile::White));
+    let tiles: Tiles = Tiles::from(vec![
+        Tile::M1,
+        Tile::M1,
+        Tile::M1,
+        Tile::M2,
+        Tile::M3,
+        Tile::M4,
+        Tile::M5,
+        Tile::Mr,
+        Tile::M6,
+        Tile::M7,
+        Tile::M8,
+        Tile::M9,
+        Tile::M9,
+        Tile::M9,
+    ]);
 
-    let game = Mahjong::four_players(
+    let game: Mahjong<GreedyAgent, GreedyAgent, GreedyAgent, GreedyAgent> = Mahjong::four_players(
         Wind::East,
         true,
         (

@@ -1,5 +1,4 @@
-use crate::internal::{wind::Wind, action::Action};
-use crate::player::Player;
+use crate::internal::{wind::Wind, action::Action, player::Player};
 
 pub struct State {
     wind: Wind,

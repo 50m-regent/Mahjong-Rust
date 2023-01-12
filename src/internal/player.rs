@@ -8,7 +8,7 @@ pub struct Player {
 impl Player {
     pub fn new() -> Player {
         Player {
-            tiles: Tiles::from(Vec::from([])),
+            tiles: Tiles::from(vec![]),
             score: 0,
         }
     }
